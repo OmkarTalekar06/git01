@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Change</title>
+</head>
+<body onload="changeColor()">
+<script>
+const colors = ["purple", "blue", "orange", "pink","red","black","tint","brown"];
+let i = 0;
+
+function changeColor() {
+    document.body.style.background = colors[i];
+    i = (i + 1) % colors.length; // Cycle through the array
+    setTimeout(changeColor, 500);
+}
+</script>
+</body>
+</html>
